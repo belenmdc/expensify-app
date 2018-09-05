@@ -28,17 +28,19 @@ export class ExpenseListFilters extends React.Component {
   };
 
   onSortChange = e => {
-    // switch (e.target.value) {
-    //     case 'date':
-    //         this.props.dispatch(sortByDate());
-    //     case 'amount':
-    //         this.props.dispatch(sortByAmount());
-    // }
-    if (e.target.value === "date") {
-      this.props.sortByDate();
-    } else if (e.target.value === "amount") {
-      this.props.sortByAmount();
+    switch (e.target.value) {
+        case 'date':
+            this.props.sortByDate();
+            break;
+        case 'amount':
+            this.props.sortByAmount();
+            break;
     }
+    // if (e.target.value === 'date') {
+    //   this.props.sortByDate();
+    // } else if (e.target.value === 'amount') {
+    //   this.props.sortByAmount();
+    // }
   };
 
   render() {
